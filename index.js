@@ -4,7 +4,8 @@ const app=express();
 const port=3000;
 
 app.get('/',(req,res)=>{
-    res.write("hellow");
+    //res.write("hellow");
+    res.sendFile('index.html');
     res.end();
 })
 
