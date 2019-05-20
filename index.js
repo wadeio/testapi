@@ -1,12 +1,12 @@
 const express=require('express');
 const app=express();
-
+const path = require('path');
 const port=3000;
 
+//提供靜態檔案
+app.use(express.static('public'));
 app.get('/',(req,res)=>{
-    //res.write(__dirname);
-    //res.render('index');
-    res.sendFile(__dirname+'/index.html');
+    res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 app.listen(80,function(){
